@@ -13,13 +13,13 @@ public class FallingObject : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.name.Equals("Chicken"))
+        if (col.gameObject.name.Equals("Player"))
             rb.isKinematic = false;
     }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name.Equals("Chicken"))
+        if (col.gameObject.name.Equals("Player"))
             Debug.Log("Got you!");
     }
 

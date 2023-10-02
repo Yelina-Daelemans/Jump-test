@@ -17,7 +17,7 @@ public class Walking : MonoBehaviour
     [SerializeField] float Jumpheight = 5f;
 
 
-    public static event Action PointsPickedUp = delegate { };
+    //public static event Action PointsPickedUp = delegate { };
 
 
     private void Awake()
@@ -52,15 +52,5 @@ public class Walking : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Points"))
-        {
-            PointsPickedUp();
-            Destroy(collision.gameObject);
-
-        }
-    }
-
+    }    
 }
